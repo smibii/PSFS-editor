@@ -1,0 +1,63 @@
+*permissions:
+		# All Permissions;
+		%m;
+		
+		# Access Permissions;
+		accessDashboard;
+		accessMaintenance;
+		
+		# Add Permissions;
+		addComments;
+		addPosts;
+		addPlaylists;
+		addPostsToOwnPlaylists;
+		addPostsToPlaylists;
+		addPostsToOwnSaves;
+		addPostsToSaves;
+		
+		# Remove Permissions;
+		removeOwnComments;
+		removeComments;
+		removeOwnPosts;
+		removePosts;
+		removeOwnPlaylists;
+		removePlaylists;
+		removePostsFromOwnPlaylists;
+		removePostsFromPlaylists;
+		removePostsFromOwnSaves;
+		removePostsFromSaves;
+		removeOwnAccount;
+		removeAccounts;
+		
+		# Delete Permissions;
+		deleteOwnComments;
+		deletComments;
+		deleteOwnPosts;
+		deletePosts;
+		deleteOwnPlaylists;
+		deletePlaylists;
+		deleteOwnAccount;
+		deleteAccounts;
+		
+		# View Permissions;
+		viewOwnComments;
+		viewComments;
+		viewOwnPosts;
+		viewPosts;
+		viewOwnPlaylists;
+		viewPlaylists;
+		
+		# Change Permissions;
+		changeOwnProfilePic;
+		changeProfilePics;
+		changeOwnBio;
+		changeBios;
+		changeOwnBanner;
+		changeBanners;
+		changeOwnBirthday;
+		changeBirthdays;
+		changeOwnUsername;
+		changeUsernames;
+		changeOwnSettings;
+		changeSettings;
+*

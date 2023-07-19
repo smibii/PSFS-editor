@@ -1,0 +1,76 @@
+#^ Syntax;
+
+# Every section startes;
+# and ends with a '*';
+
+# Between the two '*';
+# you will enter the name;
+# of the section;
+
+# exmp;
+*example:*
+
+# It is important to add ':';
+# after the name, to validate;
+# the name;
+
+# Now you can add values;
+
+# There are multiple types;
+# of values you can choose from;
+
+# Here is an example section;
+# with all value types;
+
+# exmp;
+*example:
+		# Normal value string;
+		# {value_name};
+		# output: value_name;
+		value;
+		
+		# Value array;
+		# {valu_name1}->{value_name2};
+		# output: ['value_name1', 'value_name2'];
+		value1->value2;
+		
+		# Validator;
+		# true;
+		# output: true;
+		true;
+		#^ validator types;
+		#? true/false/null/undefined/NaN;
+		
+		# In file reference;
+		# ref:{section_name};
+		# output: ...value_names;
+		# ref:example2;
+		#? Value is commented because;
+		#? there is no second section;
+		
+		# File reference;
+		# ref:@{file_name}:{value_name};
+		# output: ...value_names;
+		# ref:@example2:example2;
+		#? Value is commented because;
+		#? there is no second section;
+		
+		# Remove values;
+		# -{value_name};
+		# output: ;
+		# Removes value from output;
+		-value;
+		#! HAS TO BE AT THE END;
+		#! OF SECTION, IF USED;
+*
+
+# Full section output;
+#^ example: [;
+#^	  ['value1', 'value2'],;
+#^		true;
+#^ ];
+
+#? The references are in a comment;
+#? and we also declared that 'value';
+#? should be removed with -value;
+#? thats why they are not in the output;

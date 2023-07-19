@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/icon.png">
+    <link rel="stylesheet" href="./assets/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="jquery.highlight-within-textarea.css" rel="stylesheet">
+    <title>PSFS Editor</title>
+</head>
+
+<body>
+    <div id="overlay-backdrop" class="hidden" onclick="(e) => {exitOverlay(e, 'overlay-backdrop')}">
+        <div id="overlay-container">
+
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="sidebar-container">
+            <div class="logo-container" title="Plug Safe File System Editor&#013;By Plug">
+                <img src="./assets/icon.png" class="logo">
+                <div class="logo-text-container">
+                    <div class="logo-text">
+                        PSFS Edit
+                    </div>
+                    <div class="logo-additionals">
+                        by PLUG
+                    </div>
+                </div>
+            </div>
+            <div class="files-container">
+            </div>
+            <div class="actions-container">
+                <div class="actions-item-container">
+                    <div class="actions-item">
+                        <img src="./assets/svgs/add.svg" class="actions-icon">
+                    </div>
+                    <div class="actions-title" onclick="addFile()">
+                        Add file
+                    </div>
+                </div>
+                <div class="actions-item-container">
+                    <div class="actions-item">
+                        <img src="./assets/svgs/save.svg" class="actions-icon">
+                    </div>
+                    <div class="actions-title" onclick="saveFiles()">
+                        Save files
+                    </div>
+                </div>
+                <div class="actions-item-container">
+                    <div class="actions-item">
+                        <img src="./assets/svgs/load.svg" class="actions-icon">
+                    </div>
+                    <div class="actions-title" onclick="loadLocalFiles()">
+                        Load files
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="header-container">
+
+            </div>
+            <div class="coder-container">
+                <div class="coder-input">
+                    <textarea id='lineCounter' wrap='off' spellcheck="false" readonly>1 </textarea>
+                    <textarea class="editor" id='codeEditor' spellcheck="false" wrap='off'></textarea>
+                    <div class="fadeOut-t" id="fadeOut-t"></div>
+                    <div class="fadeOut-b" id="fadeOut-b"></div>
+                </div>
+                <div class="preview-container">
+                    <textarea class='preview' id='preview' spellcheck="false" wrap='off' readonly></textarea>
+                </div>
+            </div>
+            <div class="status-bar-container">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="jquery.highlight-within-textarea.js"></script>
+<script src="bililiteRange.js"></script>
+<script src="jquery.sendkeys.js"></script>
+<script src="./utils/overlay.js" type="text/javascript"></script>
+<script src="./utils/init.js" type="text/javascript"></script>
+<script src="./utils/index.js" type="text/javascript"></script>
+<script src="./utils/lineCounter.js" type="text/javascript"></script>
+<script src="./utils/filesHandler.js" type="text/javascript"></script>
+<script src="./utils/compiler.js" type="text/javascript"></script>
+<script src="./utils/syntaxr.js" type="text/javascript"></script>
+<script src="./utils/rightClickHandler.js" type="text/javascript"></script>
+
+</html>

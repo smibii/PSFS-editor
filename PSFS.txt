@@ -1,0 +1,91 @@
+PSFS (Plug Save File System) is a system developed by the
+creator of Plug for creating basic arrays quicker.
+----------------------------------------------------------------------------------------------------------
+
+Syntax: 
+
+```file.psf
+*key:
+  	value;
+*
+```
+
+```file2.psfs
+*key2:
+  	value2;
+*
+```
+----------------------------------------------------------------------------------------------------------
+
+Features:
+
+value 				=> output: 'value' 				| normal value assignment
+value->value2		=> output: ['value', 'value2'] 	| array assignment
+123					=> output: 123					| number assignment
+true/false/..		=> output: true/false/..		| true/false/.. assignment
+ref:key				=> output: 'value'				| create refference to key
+ref:@file2:key2		=> output: 'value2'				| create refference to key of another file
+#Comment			=> output: 						| Comment
+
+-value				=> output: 				| Removes value from output
+^ IF USED HAS TO BE AT THE END OF EVERY SECTION ^
+----------------------------------------------------------------------------------------------------------
+
+Example with all features:
+
+```example.psf
+# Example File;
+# Example Section;
+*example:
+	value;
+	value->value2;
+	123;
+	true;
+	false;
+	null;
+	undefined;
+	NaN;
+	ref:example2;
+	ref:@example2:example2;
+	# Comment;
+	-value;
+*
+
+# Example 2 Section;
+*example2:
+	example2;
+*
+```
+
+```example2.psf
+# Example 2 File;
+# Example 2 Section;
+*example2:
+	example2;
+*
+```
+
+example output:
+
+example: [
+	['value', 'value2'],
+	123,
+	true,
+	false,
+	null,
+	undefined,
+	NaN,
+	example2,
+	example2
+]
+----------------------------------------------------------------------------------------------------------
+
+Extra decryption:
+
+%s    -> :space:
+%m    -> *
+%sem  -> ;
+%dp   -> :
+%h    -> #
+%br   -> \n
+----------------------------------------------------------------------------------------------------------
