@@ -1,3 +1,3 @@
 # PSFS-editor
 
-click [here](psfs-editor.netlify.app) for online preview
+click [here](https://psfs-editor.netlify.app) for online preview
